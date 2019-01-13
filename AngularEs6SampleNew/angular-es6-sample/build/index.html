@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="myApp" ng-strict-di>
+<head>
+	<title>Angular ES6 Sample</title>
+</head>
+<body>
+
+	<div ng-controller="HomeController as ctrl">
+
+	<h1> Original Code </h1>
+
+	Hello {{ ctrl.person.name | upper }}!
+
+	</div>
+
+	<div ng-controller="MyController as ctrlName">
+
+		<h1> Learning AngularJs </h1>
+		<p> With gulp/babel </p>
+		<h2>Coucou in MyController</h2>
+		
+		<p> name is {{ ctrlName.name }}</p>
+		<p> age is {{ ctrlName.age }}</p>
+		
+		<input ng-model='city' placeholder="Enter your city" />
+		<p> The city is {{city}} </p>
+		
+
+		<div> 
+			<h2> Activities </h2>
+			<button ng-click="ctrlName.add()"> Add </button>
+			<input placeholder="Enter an activity" ng-model='activity'/>
+			<ul ng-repeat="act in ctrlName.activities track by $index"> <!-- track by index added to prevent ngRepeat dupes -->
+				<li> {{act  | uppercase}} ; {{act  | lowercase}} </li>
+			</ul>
+		</div>
+	</div>
+
+	<script src="libs/angular.min.js"></script>
+	<script src="scripts/app.min.js"></script>
+</body>
+</html>
