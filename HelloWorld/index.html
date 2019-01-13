@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- edit -->
+<html ng-app="App">
+    <head>
+        <meta charset="utf-8">
+        <title>Angular Example</title>
+    </head>
+    <!-- edit -->
+    <body ng-controller="mainController">
+
+    	<h1>Coucou</h1>
+
+    		Simple operation (2+4) : {{2+4}}
+    	<div>
+    		data in controller : {{data}}
+    	</div>
+    	<div>
+    		<input ng-model="temp"/>
+	    </div>
+    	input is reflected here by two-ways binding : {{temp}}
+    </body>
+    <script type="text/javascript" src="./node_modules/angular/angular.js"></script>
+    <!-- edit -->
+    <script type="text/javascript" src="./app.js"></script>
+</html>
